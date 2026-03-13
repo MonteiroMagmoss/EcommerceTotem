@@ -1,0 +1,73 @@
+body{
+  font-family: 'Times New Roman', Times, serif, Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  background-color: #4A2C2A;
+  margin: 0;
+  max-width: auto;
+  margin-inline: auto;
+  min-height: 100vh;
+  border: 1px solid #ccc;
+}
+.logo-text{
+  color: #D9AF85;
+  font-size: 50px;
+  margin: 20px;
+  margin-top: 10%;
+}
+@media (max-width: 768px){
+  body{
+    max-width: 100%;
+    border: none;
+    flex-direction: column;
+  }
+}
+.login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #d9af85b2;
+  
+  height: 50vh;
+  width: 50%;
+  padding: 10%;
+  margin: auto;
+  border-radius: 100px;
+}
+.login-title{
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+label{
+  color: #4A2C2A;
+  font-size: 100%;
+  margin-bottom: 10px;
+}
+input{
+  background-color: #cacaca;
+  color: #3B1F1F;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+input:focus{
+  outline: none;
+  border-color: #4A2C2A;
+  box-shadow: 0 0 5px #4A2C2A;
+}
+button{
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #4A2C2A;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #3B1F1F;
+}
