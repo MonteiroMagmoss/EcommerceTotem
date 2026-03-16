@@ -43,9 +43,60 @@ function App() {
       </header>
       <main className="main-content">
         {usuario.cargo === "admin" ? (
-            <p>Olá, administrador!</p>
+            <section className='section-container'>
+              <h2>Área de Administração</h2>
+            </section>
           ) : (
-            <p>Olá, cliente!</p>
+            <section className='section-container'>
+              <div className='offer'>
+                <div className='offer-content'>
+                  <h2>20% OFF</h2>
+                  <p className='offer-description'>Descontos especiais para você!</p>
+                </div>
+                <div className='content'>
+                  <div className='category-content'>
+                    <h2>Categorias</h2>
+                    <ul className='category-list'>
+                      <li className='category-item'><button>Esfihas</button></li>
+                      <li className='category-item'><button>Combo</button></li>
+                      <li className='category-item'><button>Bebidas</button></li>
+                      <li className='category-item'><button>Sobremesas</button></li>
+                    </ul>
+                  </div>
+                  <div className='product-content'>
+                    <h2>Produtos em Destaque</h2>
+                    <ul className='product-list'>
+                      <li className='product-item'>
+                        <div className='product-box'>
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-y_C29erAmx0VhdwHuoZugr9SAihBIw-Buw&s" alt="Esfiha de Carne" className='product-image' />
+                          <div className='product-info'>
+                            <h2>Esfiha de Carne</h2>
+                            <p>R$ 5,00</p>
+                            <button>Adicionar ao Carrinho</button>
+                          </div>
+                        </div>
+                        <div className='product-box'>
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-y_C29erAmx0VhdwHuoZugr9SAihBIw-Buw&s" alt="Esfiha de Carne" className='product-image' />
+                          <div className='product-info'>
+                            <h2>Esfiha de Frango</h2>
+                            <p>R$ 5,00</p>
+                            <button>Adicionar ao Carrinho</button>
+                          </div>
+                        </div>
+                        <div className='product-box'>
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-y_C29erAmx0VhdwHuoZugr9SAihBIw-Buw&s" alt="Esfiha de Carne" className='product-image' />
+                          <div className='product-info'>
+                            <h2>Esfiha de Queijo</h2>
+                            <p>R$ 5,00</p>
+                            <button>Adicionar ao Carrinho</button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
           )}
       </main>
     </>

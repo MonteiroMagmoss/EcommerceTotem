@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 body{
   font-family: 'Times New Roman', Times, serif, Georgia, 'Times New Roman', Times, serif;
   font-size: 50px;
@@ -21,6 +23,114 @@ body{
     flex-direction: column;
   }
 }
+p{
+  color: #4A2C2A;
+  font-size: 20px;
+}
+.section-container{
+  background-color: #ffffff;
+  margin: 0;
+}
+.offer{
+  background-color: #d9af8548;
+  padding: 20px;
+  margin: 0;
+  height: 80vh;
+  max-width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.offer-content{
+  background-color: #d9af85;
+  padding: 20px;
+  margin: 0;
+  height: 10vh;
+  width: 50vh;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px #00000046;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.offer-content h1{
+  color: #4A2C2A;
+  font-size: 30px;
+}
+.offer-content p{
+  color: #4A2C2A;
+  font-size: 20px;
+}
+.content{
+  padding: 20px;
+  margin: 0;
+  height: 70vh;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+.category-list{
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-around;
+  
+  height: 60vh;
+  width: 100%;
+}
+.category-item button{
+  background-color: #d9af85;
+  color: #4A2C2A;
+
+  border-radius: 10px;
+  border: none;
+  height: 10vh;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+}
+.product-list{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  
+  height: 60vh;
+  width: 100%;
+  margin-left: 2vh;
+}
+.product-box{
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px #00000046;
+  padding: 10px;
+  margin: 10px;
+  height: 17vh;
+  width: 50vh;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.product-image{
+  width: auto;
+  height: 15vh;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+h2{
+  color: #4A2C2A;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
 .login-container{
   display: flex;
   flex-direction: column;
@@ -32,9 +142,10 @@ body{
   width: 50%;
   padding: 10%;
   margin: auto;
-  border-radius: 100px;
+  border-radius: 30px;
 }
 .login-title{
+  text-wrap: nowrap;
   font-size: 40px;
   margin-bottom: 20px;
 }
@@ -48,7 +159,7 @@ input{
   color: #3B1F1F;
   padding: 10px;
   font-size: 20px;
-  border: 1px solid #ccc;
+  border: 2px solid #3B1F1F;
   border-radius: 5px;
   margin-bottom: 20px;
   width: 100%;
@@ -56,7 +167,8 @@ input{
 input:focus{
   outline: none;
   border-color: #4A2C2A;
-  box-shadow: 0 0 5px #4A2C2A;
+  border: 2px solid #000000;
+  box-shadow: 0 0 10px #4A2C2A;
 }
 button{
   width: 100%;
