@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+
+body{
+  font-family: 'Times New Roman', Times, serif, Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  background-color: #4A2C2A;
+  margin: 0;
+  max-width: max-content;
+  margin-inline: auto;
+  border: 1px solid #ccc;
+}
+.logo-text{
+  color: #D9AF85;
+  font-size: 50px;
+  margin: 20px;
+  margin-top: 10%;
+}
+@media (max-width: 768px){
+  body{
+    max-width: 100%;
+    border: none;
+    flex-direction: column;
+  }
+}
+p{
+  color: #4A2C2A;
+  font-size: 20px;
+}
+
+/*Style para o Cliente */
+
+/* Estilo para o contêiner da seção */ 
+.img-inicio{
+  width: auto;
+  height: 80vh;
+  opacity: 80%;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+  margin: 0;
+  width: 100%;
+  max-height: max-content;
+  
+}
+.main{
+  background-color: #d9af8548;
+  padding: 20px;
+  margin: 0;
+  height: 70vh;
+  width: 100%;
+  max-width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Config da oferta */
+.offer-content{
+  background-color: #d9af85;
+  padding: 20px;
+  margin: 0;
+  height: 10vh;
+  width: 70%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px #00000046;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.offer-content h1{
+  color: #4A2C2A;
+  font-size: 30px;
+}
+.offer-content p{
+  color: #4A2C2A;
+  font-size: 20px;
+}
+/* Config do conteúdo principal da Home */
+.main{
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+
+  width: 100%;
+}
+.content{
+  padding: 20px;
+  margin: 0;
+  height: 50vh;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+
+/* Config das categorias */
+.category-list{
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-around;
+  
+  height: 50vh;
+  width: 100%;
+  overflow-y: auto;
+  padding-right: 2vh;
+}
+.category-item button{
+  background-color: #d9af85;
+  color: #4A2C2A;
+
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 2vh;;
+  height: 10vh;
+  cursor: pointer;
+}
+
+/* Config dos produtos */
+.product-list{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  
+  height: 50vh;
+  width: 100%;
+  margin-left: 2vh;
+  padding-right: 2vh;
+  overflow-y: auto;
+}
+.product-box{
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px #00000046;
+  padding: 10px;
+  margin: 10px;
+  height: 20vh;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.product-image{
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+/* Conteudo dos botoes do Cliente */
+.buttons-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+
+  margin: 0;
+  margin-top: 2vh;
+  max-width: 100%;
+}
+.buttons-container button{
+
+  width: 30vh;
+  height: 8vh;
+  border-radius: 10px;
+}
+.carrinho-box button{
+    background-color: #640000;
+    border-radius: 5px;
+}
+
+
+
+
+/* Conteudo da Aba de Login */
+h2{
+  color: #4A2C2A;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #d9af85b2;
+  
+  height: 50vh;
+  width: 50%;
+  padding: 10%;
+  margin: auto;
+  border-radius: 30px;
+}
+.login-title{
+  text-wrap: nowrap;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+label{
+  color: #4A2C2A;
+  font-size: 100%;
+  margin-bottom: 10px;
+}
+input{
+  background-color: #cacaca;
+  color: #3B1F1F;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #3B1F1F;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+input:focus{
+  outline: none;
+  border-color: #4A2C2A;
+  border: 2px solid #000000;
+  box-shadow: 0 0 10px #4A2C2A;
+}
+button{
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #4A2C2A;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #3B1F1F;
+}
+

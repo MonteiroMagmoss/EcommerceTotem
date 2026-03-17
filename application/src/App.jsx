@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Cliente from './pages/cliente.jsx'
 import './App.css'
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   const[listaUsuarios] = useState([
     {id: 1, email: "admin@admin.com", senha: "123", cargo: "admin"},
-    {id: 2, email: "cliente@cliente.com", senha: "123", cargo: "cliente"}
+    {id: 2, email: "c@c.com", senha: "123", cargo: "cliente"}
   ]);
   const realizarLogin = () =>{
     const achado = listaUsuarios.find(u => u.email === email && u.senha === senha);
@@ -48,72 +49,7 @@ function App() {
             </section>
           ) : (
             <section className='section-container'>
-              <div className='main'>
-                <div className='offer-content'>
-                  <h2>20% OFF</h2>
-                  <p className='offer-description'>Descontos especiais para você!</p>
-                </div>
-                <div className='content'>
-                  <div className='category-content'>
-                    <h2>Categorias</h2>
-                    <ul className='category-list'>
-                      <li className='category-item'><button>Novidades</button></li>
-                      <li className='category-item'><button>Esfihas</button></li>
-                      <li className='category-item'><button>Combo</button></li>
-                      <li className='category-item'><button>Bebidas</button></li>
-                      <li className='category-item'><button>Sobremesas</button></li>
-                    </ul>
-                  </div>
-                  <div className='product-content'>
-                    <h2>Produtos em Destaque</h2>
-                    <ul className='product-list'>
-                      <li className='product-item'>
-                        <div className='product-box'>
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-y_C29erAmx0VhdwHuoZugr9SAihBIw-Buw&s" alt="Esfiha de Carne" className='product-image' />
-                          <div className='product-info'>
-                            <h2>Esfiha de Carne</h2>
-                            <p>R$ 5,00</p>
-                            <button>Adicionar ao Carrinho</button>
-                          </div>
-                        </div>
-                        <div className='product-box'>
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-y_C29erAmx0VhdwHuoZugr9SAihBIw-Buw&s" alt="Esfiha de Carne" className='product-image' />
-                          <div className='product-info'>
-                            <h2>Esfiha de Frango</h2>
-                            <p>R$ 5,00</p>
-                            <button>Adicionar ao Carrinho</button>
-                          </div>
-                        </div>
-                        <div className='product-box'>
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-y_C29erAmx0VhdwHuoZugr9SAihBIw-Buw&s" alt="Esfiha de Carne" className='product-image' />
-                          <div className='product-info'>
-                            <h2>Esfiha de Queijo</h2>
-                            <p>R$ 5,00</p>
-                            <button>Adicionar ao Carrinho</button>
-                          </div>
-                        </div>
-                        <div className='product-box'>
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-y_C29erAmx0VhdwHuoZugr9SAihBIw-Buw&s" alt="Esfiha de Carne" className='product-image' />
-                          <div className='product-info'>
-                            <h2>Esfiha de Chocolate</h2>
-                            <p>R$ 5,00</p>
-                            <button>Adicionar ao Carrinho</button>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <footer>
-                <div className='buttons-container'>
-                  <div><button>Cancelar</button></div>
-                  <div><button>Carrinho</button></div>
-                  <div><button>Avançar</button></div>
-                </div>
-                <p>&copy; 2024 Las Esfihas. Todos os direitos reservados.</p>
-              </footer>
-              <button className="logout-button" onClick={() => setUsuario(null)}>Sair</button>
+              <Cliente setUsuario={setUsuario} />
             </section>
           )}
       </main>
