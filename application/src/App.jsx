@@ -39,16 +39,16 @@ function App() {
     <>
       <header className="header">
         <div className="logo-text">Las Esfihas</div>
-        <button className="logout-button" onClick={() => setUsuario(null)}>Sair</button>
       </header>
       <main className="main-content">
         {usuario.cargo === "admin" ? (
             <section className='section-container'>
               <h2>Área de Administração</h2>
+              <button className="logout-button" onClick={() => setUsuario(null)}>Sair</button>
             </section>
           ) : (
             <section className='section-container'>
-              <div className='offer'>
+              <div className='main'>
                 <div className='offer-content'>
                   <h2>20% OFF</h2>
                   <p className='offer-description'>Descontos especiais para você!</p>
@@ -57,6 +57,7 @@ function App() {
                   <div className='category-content'>
                     <h2>Categorias</h2>
                     <ul className='category-list'>
+                      <li className='category-item'><button>Novidades</button></li>
                       <li className='category-item'><button>Esfihas</button></li>
                       <li className='category-item'><button>Combo</button></li>
                       <li className='category-item'><button>Bebidas</button></li>
@@ -91,11 +92,28 @@ function App() {
                             <button>Adicionar ao Carrinho</button>
                           </div>
                         </div>
+                        <div className='product-box'>
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-y_C29erAmx0VhdwHuoZugr9SAihBIw-Buw&s" alt="Esfiha de Carne" className='product-image' />
+                          <div className='product-info'>
+                            <h2>Esfiha de Chocolate</h2>
+                            <p>R$ 5,00</p>
+                            <button>Adicionar ao Carrinho</button>
+                          </div>
+                        </div>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
+              <footer>
+                <div className='buttons-container'>
+                  <div><button>Cancelar</button></div>
+                  <div><button>Carrinho</button></div>
+                  <div><button>Avançar</button></div>
+                </div>
+                <p>&copy; 2024 Las Esfihas. Todos os direitos reservados.</p>
+              </footer>
+              <button className="logout-button" onClick={() => setUsuario(null)}>Sair</button>
             </section>
           )}
       </main>
