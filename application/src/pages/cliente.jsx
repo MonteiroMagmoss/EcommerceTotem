@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import React from 'react';
 import './cliente.css';
 
+
 function Cliente({setUsuario}) {
     const [pagina, setPagina] = useState(0);
     const [contador, setContador] = useState(0);
@@ -43,7 +44,7 @@ function Cliente({setUsuario}) {
     function selecionarCategoria(categoriaNome){
         setCategoriaSelecionada(categoriaNome);
     }
-    //carrinho.map((produto) => console.log(produto.nome));
+
     function adicionarProduto(produtoId){
         setCarrinho((carrinho) => {
             const produto = listaProdutos.find((produto) => produto.id === produtoId);
@@ -91,8 +92,9 @@ function Cliente({setUsuario}) {
                 <div className='main'>
                     <h2>Bem Vindo ao Las Esfihas</h2>
                     <p>Explore nosso cardápio e aproveite nossas ofertas especiais!</p>
-                    <button onClick={() => setPagina(1)}>Entrar</button>
-                    <img className='img-inicio' src="https://blog.biglar.com.br/wp-content/uploads/2022/10/iStock-537521984-1.jpeg" alt="img-Início" />
+                    <button onClick={() => setPagina(1)} className='btn-inicio'>
+                        <img className='img-inicio' src="https://blog.biglar.com.br/wp-content/uploads/2022/10/iStock-537521984-1.jpeg" alt="img-Início" />
+                    </button>
                     <button onClick={() => setUsuario(null)}>Sair</button>
                 </div>
             </section>
