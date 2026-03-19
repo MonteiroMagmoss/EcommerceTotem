@@ -8,7 +8,7 @@ function Cliente({setUsuario}) {
     const [pagina, setPagina] = useState(0);
     const [contador, setContador] = useState(0);
     const [carrinho, setCarrinho] = useState([]);
-    const [categoriaSelecionada, setCategoriaSelecionada] = useState("Esfihas");
+    const [categoriaSelecionada, setCategoriaSelecionada] = useState("Novidades");
 
     useEffect(() => {
         console.log("Carrinho atualizado:", carrinho);
@@ -131,9 +131,11 @@ function Cliente({setUsuario}) {
                                             <img src={produto.imagem} alt={produto.nome} className='product-image' />
                                             <div className='product-info'>
                                                 <h2>{produto.nome}</h2>
+                                                <h3>R$ {produto.preco.toFixed(2)}</h3>
                                                 <p>{produto.descricao}</p>
-                                                <h2>R$ {produto.preco.toFixed(2)}</h2>
-                                                <button onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                <div className='buttons-count'>
+                                                    <button className='add-button' onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -150,7 +152,9 @@ function Cliente({setUsuario}) {
                                                 <h2>{produto.nome}</h2>
                                                 <p>{produto.descricao}</p>
                                                 <h2>R$ {produto.preco.toFixed(2)}</h2>
-                                                <button onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                <div className='buttons-count'>
+                                                    <button className='add-button' onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -167,7 +171,9 @@ function Cliente({setUsuario}) {
                                                 <h2>{produto.nome}</h2>
                                                 <p>{produto.descricao}</p>
                                                 <h2>R$ {produto.preco.toFixed(2)}</h2>
-                                                <button onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                <div className='buttons-count'>
+                                                    <button className='add-button' onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -184,7 +190,9 @@ function Cliente({setUsuario}) {
                                                 <h2>{produto.nome}</h2>
                                                 <p>{produto.descricao}</p>
                                                 <h2>R$ {produto.preco.toFixed(2)}</h2>
-                                                <button onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                <div className='buttons-count'>
+                                                    <button className='add-button' onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -202,7 +210,9 @@ function Cliente({setUsuario}) {
                                                 <h2>{produto.nome}</h2>
                                                 <p>{produto.descricao}</p>
                                                 <h2>R$ {produto.preco.toFixed(2)}</h2>
-                                                <button onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                <div className='buttons-count'>
+                                                    <button className='add-button' onClick={() => adicionarProduto(produto.id)}>Adicionar ao Carrinho</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -231,7 +241,7 @@ function Cliente({setUsuario}) {
                 <div className='main'>
                     <h2>Carrinho de Compras</h2>
                     <div>
-                        <p>Itens no carrinho: {contador}</p>
+                        <p>Itens no carrinho: {contarProdutos()}</p>
                         <ul className='product-list'>
                             {carrinho.map((produto) => (
                                 <li className='product-item' key={produto.id}>
@@ -241,8 +251,10 @@ function Cliente({setUsuario}) {
                                             <h2>{produto.nome}</h2>
                                             <p>Quantidade: {produto.quantidade}</p>
                                             <h2>R$ {(produto.preco * produto.quantidade).toFixed(2)}</h2>
-                                            <button onClick={() => adicionarProduto(produto.id)}>+</button>
-                                            <button onClick={() => removerDoCarrinho(produto.id)}>-</button>
+                                            <div className='buttons-count'>
+                                                <div><button onClick={() => adicionarProduto(produto.id)}>+</button></div>
+                                                <div><button onClick={() => removerDoCarrinho(produto.id)}>-</button></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -262,7 +274,7 @@ function Cliente({setUsuario}) {
                     <h2>Finalizar Pedido</h2>
                     <div><h2>Resumo:</h2></div>
                     <div className='product-content'>
-                        <p>Itens no carrinho: {contador}</p>
+                        <p>Itens no carrinho: {contarProdutos()}</p>
                         <ul className='product-list'>
                             {carrinho.map((produto) => (
                                 <li className='product-item' key={produto.id}>
