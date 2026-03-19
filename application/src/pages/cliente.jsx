@@ -6,7 +6,6 @@ import './cliente.css';
 
 function Cliente({setUsuario}) {
     const [pagina, setPagina] = useState(0);
-    const [contador, setContador] = useState(0);
     const [carrinho, setCarrinho] = useState([]);
     const [categoriaSelecionada, setCategoriaSelecionada] = useState("Novidades");
 
@@ -33,14 +32,7 @@ function Cliente({setUsuario}) {
         {id: 10, nome: "Milkshake", preco: 9.50, categoria: "Sobremesas", quantidade: 0, descricao: "Delicioso milkshake de leite condensado, perfeito para finalizar suas refeições.", imagem: "https://images.metroimg.com/2024/09/12175623/milkshake-1.jpg"},
         {id: 11, nome: "Esfiha de Carne + Coca Cola + Pudim", preco: 12.90, categoria: "Combo", quantidade: 0, descricao: "Combo completo com esfiha de carne, coca cola e pudim.", imagem: "https://www.acumae.com.br/static/team/2019/0320/15512792358899.jpeg"}
     ];
-    const listaCategorias = [
-        {id: 1, nome: "Novidades"},
-        {id: 2, nome: "Esfihas"},
-        {id: 3, nome: "Combo"},
-        {id: 4, nome: "Bebidas"},
-        {id: 5, nome: "Sobremesas"}
-    ];
-    
+
     function selecionarCategoria(categoriaNome){
         setCategoriaSelecionada(categoriaNome);
     }
@@ -79,10 +71,19 @@ function Cliente({setUsuario}) {
             }
         });
     }
+    function limparProdutoDoCarrinho(produtoId){
+        setCarrinho((carrinho) => {
+            const produto = carrinho.find((item) => item.id === produtoId);
+            if(produto){
+                return carrinho.filter((item) => item.id !== produtoId);
+            } else {
+                return carrinho;
+            }
+        })
+    };
 
     function cancelarPedido(){
         setCarrinho([]);
-        setContador(0);
         setPagina(0);
     }
     // Aba início
@@ -91,7 +92,7 @@ function Cliente({setUsuario}) {
             <section>
                 <div className='main'>
                     <h2>Bem Vindo ao Las Esfihas</h2>
-                    <p>Explore nosso cardápio e aproveite nossas ofertas especiais!</p>
+                    <p>Explore nosso cardápio e aproveite nossas ofertas especiais! Clique na imagem para começar o pedido!</p>
                     <button onClick={() => setPagina(1)} className='btn-inicio'>
                         <img className='img-inicio' src="https://blog.biglar.com.br/wp-content/uploads/2022/10/iStock-537521984-1.jpeg" alt="img-Início" />
                     </button>
@@ -222,12 +223,12 @@ function Cliente({setUsuario}) {
                     </div>
                     </div>
                 </div>
-                <footer>
+                <footer className='footer'>
                     <div className='carrinho-box'><button className='' onClick={() => setPagina(2)}>Carrinho</button></div>
                     <p>Itens no carrinho: {contarProdutos()}</p>
                     <div className='buttons-container'>
-                    <div><button onClick={cancelarPedido}>Cancelar</button></div>
-                    <div><button onClick={() => setPagina(3)}>Avançar</button></div>
+                        <div><button onClick={cancelarPedido}>Cancelar</button></div>
+                        <div><button onClick={() => setPagina(3)}>Avançar</button></div>
                     </div>
                     <p>&copy; 2024 Las Esfihas. Todos os direitos reservados.</p>
                 </footer>
@@ -256,12 +257,17 @@ function Cliente({setUsuario}) {
                                                 <div><button onClick={() => removerDoCarrinho(produto.id)}>-</button></div>
                                             </div>
                                         </div>
+                                        <div className='remove-area'>
+                                            <button className='remove-button' onClick={() => limparProdutoDoCarrinho(produto.id)}>X</button>
+                                        </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <button onClick={() => setPagina(1)}>Voltar</button>    
+                    <div className='buttons-container'>
+                        <button onClick={() => setPagina(1)}>Voltar</button>  
+                    </div>  
                 </div>
             </section>
         );
@@ -272,9 +278,8 @@ function Cliente({setUsuario}) {
             <section>
                 <div className='main'>
                     <h2>Finalizar Pedido</h2>
-                    <div><h2>Resumo:</h2></div>
                     <div className='product-content'>
-                        <p>Itens no carrinho: {contarProdutos()}</p>
+                    <div><h2>Resumo: <p>Itens no carrinho: {contarProdutos()}</p> </h2></div>
                         <ul className='product-list'>
                             {carrinho.map((produto) => (
                                 <li className='product-item' key={produto.id}>
@@ -291,12 +296,12 @@ function Cliente({setUsuario}) {
                         </ul>
                     </div>
                     <div>
-                        <h2>Total: R$ {carrinho.reduce((total, produto) => total + (produto.preco * produto.quantidade), 0).toFixed(2)}</h2>
+                        <h2 className='text-price'>Total: R$ {carrinho.reduce((total, produto) => total + (produto.preco * produto.quantidade), 0).toFixed(2)}</h2>
                     </div>
-                     <div>
-                        <button>Finalizar Pedido</button>
+                    <div className='buttons-container'>
+                        <div><button onClick={() => setPagina(1)}>Voltar</button></div>    
+                        <div><button>Finalizar Pedido</button></div>
                     </div>
-                    <button onClick={() => setPagina(1)}>Voltar</button>    
                 </div>
             </section>
         );

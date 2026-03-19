@@ -1,28 +1,5 @@
 @import "tailwindcss";
 
-
-body{
-  font-family: 'Times New Roman', Times, serif, Georgia, 'Times New Roman', Times, serif;
-  font-size: 50px;
-  background-color: #4A2C2A;
-  margin: 0;
-  max-width: max-content;
-  margin-inline: auto;
-  border: 1px solid #ccc;
-}
-.logo-text{
-  color: #D9AF85;
-  font-size: 50px;
-  margin: 20px;
-  margin-top: 10%;
-}
-@media (max-width: 768px){
-  body{
-    max-width: 100%;
-    border: none;
-    flex-direction: column;
-  }
-}
 p{
   color: #4A2C2A;
   font-size: 20px;
@@ -32,9 +9,11 @@ p{
 
 /* Estilo para o contêiner da seção */ 
 .img-inicio{
-  width: auto;
+  width: 100vw;
   height: 80vh;
-  opacity: 50%;
+  opacity: 70%;
+  margin: 0;
+  padding: 0;
 }
 section{
   display: flex;
@@ -52,13 +31,25 @@ section{
   background-color: #d9af8548;
   padding: 20px;
   margin: 0;
-  height: 70vh;
-  width: 100%;
+  height: max-content;
+  width: 100vw;
   max-width: 100%;
   
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.footer{
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0;
+  height: max-content;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 
@@ -187,7 +178,7 @@ section{
   padding: 10px;
   margin-top: 10px;
   cursor: pointer;
-  width: 30vh;
+  width: 50vw;
 }
 .product-info button{
   background-color: #d9af85;
@@ -212,7 +203,7 @@ section{
   padding: 10px;
   margin: 10px;
   height: max-content;
-  width: 50vh;
+  width: 75vw;
   
   display: flex;
   flex-direction: row;
@@ -239,15 +230,24 @@ section{
 }
 .buttons-container button{
 
-  width: 30vh;
+  width: 30vw;
   height: 8vh;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .carrinho-box button{
-    background-color: #640000;
-    border-radius: 5px;
+  width: 100vw;
+  height: 5vh;
+  
+  background-color: #640000;
+  border-radius: 5px;
 }
-
+.text-price{
+  color: #4A2C2A;
+  font-size: 1.1em;
+  margin: 0;
+  margin-top: 2vh;
+}
 
 
 
@@ -315,7 +315,30 @@ button:hover{
   cursor: pointer;
 
   border-radius: 0%;
+  padding: 0;
 }
 .btn-inicio:hover{
   background-color: #4A2C2A;
+}
+.remove-button{
+  background-color: #640000;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  width: 5vw;
+  height: 5vh;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.remove-button:hover{
+  background-color: #4A2C2A;
+  color: #d9af85;
+}
+.remove-area{
+  width: 35vw;
+
+  display: flex;
+  align-items: start;
+  justify-content: end;
 }

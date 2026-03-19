@@ -9,7 +9,7 @@ function App() {
 
   const[listaUsuarios] = useState([
     {id: 1, email: "admin@admin.com", senha: "123", cargo: "admin"},
-    {id: 2, email: "c@c.com", senha: "123", cargo: "cliente"}
+    {id: 2, email: "c@cliente.com", senha: "123", cargo: "cliente"}
   ]);
   const realizarLogin = () =>{
     const achado = listaUsuarios.find(u => u.email === email && u.senha === senha);

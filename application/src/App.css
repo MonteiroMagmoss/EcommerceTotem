@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 body{
   font-family: 'Times New Roman', Times, serif, Georgia, 'Times New Roman', Times, serif;
   font-size: 50px;
   background-color: #4A2C2A;
   margin: 0;
-  max-width: max-content;
-  margin-inline: auto;
-  border: 1px solid #ccc;
+  width: 100%;
+  padding: 0;
+  height: 100%;
 }
 .logo-text{
   color: #D9AF85;
