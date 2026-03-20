@@ -87,7 +87,7 @@ section{
 .content{
   padding: 20px;
   margin: 0;
-  height: 50vh;
+  height: 55vh;
   width: 100%;
   
   display: flex;
@@ -143,6 +143,7 @@ section{
   justify-content: space-around;
   
   height: 100%;
+  width: 50vw;
 }
 .product-info h2{
   color: #4A2C2A;
@@ -209,11 +210,36 @@ section{
   flex-direction: row;
   align-items: center;
 }
+.opacity-60{
+  opacity: 0.6;
+}
 .product-image{
   width: 15vh;
   height: 15vh;
   border-radius: 50px;
   margin-right: 20px;
+}
+.remove-button{
+  background-color: #640000;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  width: 5vw;
+  height: 5vh;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.remove-button:hover{
+  background-color: #4A2C2A;
+  color: #d9af85;
+}
+.remove-area{
+  width: 20vw;
+
+  display: flex;
+  align-items: start;
+  justify-content: end;
 }
 
 /* Conteudo dos botoes do Cliente */
@@ -296,7 +322,7 @@ input:focus{
   border: 2px solid #000000;
   box-shadow: 0 0 10px #4A2C2A;
 }
-button{
+.cliente-button{
   width: 100%;
   padding: 10px;
   font-size: 20px;
@@ -306,7 +332,7 @@ button{
   border-radius: 50px;
   cursor: pointer;
 }
-button:hover{
+.cliente-button:hover{
   background-color: #3B1F1F;
 }
 .btn-inicio{
@@ -319,26 +345,4 @@ button:hover{
 }
 .btn-inicio:hover{
   background-color: #4A2C2A;
-}
-.remove-button{
-  background-color: #640000;
-  border: none;
-  border-radius: 10px;
-  padding: 5px;
-  width: 5vw;
-  height: 5vh;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-.remove-button:hover{
-  background-color: #4A2C2A;
-  color: #d9af85;
-}
-.remove-area{
-  width: 35vw;
-
-  display: flex;
-  align-items: start;
-  justify-content: end;
 }
