@@ -31,5 +31,7 @@ O projeto foi desenvolvido com o objetivo de praticar e consolidar conhecimentos
 - Melhorar habilidades em organização de código e componentes
 - Criar um projeto sólido para portfólio profissional
 
-### 📸 Preview
-![preview do projeto](./preview.png)
+## 📸 Preview
+<p align="center">
+  <img src="./preview.png" alt="preview do projeto" width="600"/>
+</p>
