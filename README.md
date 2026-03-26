@@ -4,6 +4,11 @@
 
 👉 https://monteiromagmoss.github.io/EcommerceTotem/
 
+### Informações para login:
+  Usuários:
+  - cliente@cliente.com (Senha: 123)
+  - admin@admin.com (Senha: 123)
+
 ## 📌 Sobre o projeto
 
 O Ecommerce Totem é uma aplicação web desenvolvida com foco em simular um sistema de autoatendimento digital para compras, inspirado em totens interativos utilizados em lojas físicas.
